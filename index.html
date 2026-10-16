@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REDPAPER - The Variance Thesis | Pitch Black Industries</title>
+<meta name="description" content="Neurodivergence is not a superiority claim. It is a variance claim. The redpaper of Pitch Black Industries: why the extremes produce both the founders and the unemployed, and why structure is the entire product.">
+<meta property="og:title" content="REDPAPER - The Variance Thesis">
+<meta property="og:description" content="Neurodivergence is a variance phenomenon, not a superiority phenomenon. And variance without structure is waste.">
+<meta property="og:type" content="article">
+<style>
+:root{
+  --paper:#FBF9F1;
+  --ink:#0a0a0a;
+  --soft:#8f8b83;
+  --line:#232220;
+  --accent:#7d2b2b;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{
+  background:var(--ink);color:var(--paper);
+  font-family:"Helvetica Neue",Helvetica,"Neue Haas Grotesk Display",Arial,sans-serif;
+  font-weight:300;line-height:1.85;font-size:16px;
+}
+.wrap{max-width:860px;margin:0 auto;padding:0 40px}
+section{padding:120px 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:none}
+
+.eyebrow{
+  font-size:10px;letter-spacing:.42em;text-transform:uppercase;
+  color:var(--soft);margin-bottom:48px;
+}
+h1{
+  font-size:clamp(44px,9vw,104px);line-height:.94;letter-spacing:-.02em;
+  text-transform:uppercase;font-weight:300;
+}
+h2{
+  font-size:clamp(24px,3.4vw,38px);line-height:1.18;letter-spacing:.02em;
+  text-transform:uppercase;font-weight:300;margin-bottom:44px;
+}
+h3{
+  font-size:12px;letter-spacing:.34em;text-transform:uppercase;
+  color:var(--soft);margin:64px 0 22px;font-weight:400;
+}
+p{margin-bottom:26px;max-width:64ch}
+p.lead{font-size:21px;line-height:1.7;letter-spacing:.005em}
+strong{font-weight:500;color:#fff}
+em{font-style:normal;color:var(--accent)}
+a{color:var(--paper);text-decoration:none;border-bottom:1px solid var(--line)}
+a:hover{border-bottom-color:var(--accent)}
+
+/* HERO */
+.hero{
+  min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+  padding:140px 0 100px;border-bottom:1px solid var(--line);
+}
+.hero .rule{width:64px;height:1px;background:var(--accent);margin:56px 0 40px}
+.hero .sub{
+  font-size:11px;letter-spacing:.36em;text-transform:uppercase;color:var(--soft);
+  max-width:52ch;line-height:2.4;
+}
+
+/* BIG NUMBER */
+.stat{display:grid;grid-template-columns:200px 1fr;gap:44px;
+  padding:38px 0;border-top:1px solid var(--line);align-items:baseline}
+.stat__n{font-size:46px;line-height:1;letter-spacing:-.02em;color:var(--paper)}
+.stat__n span{font-size:15px;letter-spacing:.2em;color:var(--soft);display:block;margin-top:12px}
+.stat__b{font-size:15px;line-height:1.8;color:#cfcac1;max-width:58ch}
+
+/* PULLQUOTE */
+blockquote{
+  margin:88px 0;padding-left:34px;border-left:1px solid var(--accent);
+  font-size:clamp(21px,2.9vw,31px);line-height:1.45;letter-spacing:.01em;
+  color:#fff;max-width:26ch;font-weight:300;
+}
+
+/* TAGS */
+.tag{
+  display:inline-block;font-size:9px;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--soft);border:1px solid var(--line);padding:3px 9px;margin-left:10px;
+  vertical-align:middle;white-space:nowrap;
+}
+.tag--hi{color:var(--paper);border-color:#3a3835}
+.tag--mod{color:var(--soft)}
+
+/* TABLE */
+.grid{border-top:1px solid var(--line);margin-top:56px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:40px;
+  padding:30px 0;border-bottom:1px solid var(--line)}
+.row__k{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--soft)}
+.row__v{font-size:15px;line-height:1.75;color:#cfcac1}
+
+.foot{padding:100px 0 140px;font-size:11px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--soft);line-height:2.6}
+.sources{font-size:12px;line-height:2.1;color:var(--soft);letter-spacing:.02em}
+.sources a{color:var(--soft)}
+
+
+/* CENSUS */
+.census-intro{font-size:15px;line-height:1.85;color:#cfcac1;max-width:64ch;margin-bottom:64px}
+.cnd{display:grid;grid-template-columns:72px 1fr;gap:28px;padding:34px 0;border-bottom:1px solid var(--line)}
+.cnd:last-child{border-bottom:none}
+.cnd__n{font-size:26px;letter-spacing:-.01em;color:var(--accent);line-height:1}
+.cnd__name{font-size:17px;color:#fff;font-weight:400;letter-spacing:.02em;text-transform:uppercase;margin-bottom:16px}
+.cnd__prev{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--soft);margin-left:14px;border:1px solid var(--line);padding:2px 8px;vertical-align:middle;white-space:nowrap}
+.k{display:inline-block;font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--soft);width:190px;vertical-align:top}
+.cnd__shine,.cnd__cover{font-size:14px;line-height:1.75;color:#cfcac1;margin:0 0 10px;padding-left:0;display:flex;gap:0}
+.cnd__cover{color:#b9b4aa}
+@media(max-width:720px){
+  .cnd{grid-template-columns:1fr;gap:10px}
+  .k{width:auto;display:block;margin-bottom:6px}
+}
+@media(max-width:720px){
+  .wrap{padding:0 24px}
+  section{padding:80px 0}
+  .stat{grid-template-columns:1fr;gap:14px}
+  .row{grid-template-columns:1fr;gap:10px}
+  blockquote{margin:56px 0}
+}
+</style>
+<script src="/_pbi/player.js" defer></script></head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Pitch Black Industries · Redpaper · Edition One</div>
+    <h1>The<br>Variance<br>Thesis</h1>
+    <div class="rule"></div>
+    <div class="sub">
+      Neurodivergence is not a superiority claim.<br>
+      It is a variance claim.<br>
+      And variance without structure is waste.
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">01 · The correction</div>
+    <h2>We were making the wrong argument</h2>
+
+    <p class="lead">The comfortable version of this document says that neurodivergent
+    people are secretly better, that the world has been sitting on a hidden advantage,
+    and that anyone smart enough to notice can arbitrage it.</p>
+
+    <p>That version is popular, it flatters everyone who reads it, and the evidence does
+    not support it. We are retiring it here, in our own paper, before somebody else does
+    it for us.</p>
+
+    <p>The defensible claim is narrower and considerably more useful. Cognitive outliers
+    are not shifted upward as a population. They are <strong>spread wider</strong>. The
+    same distribution that produces a disproportionate share of the people who build
+    things also produces a disproportionate share of the people who never get hired at
+    all. Both tails belong to the same curve. Anyone selling you only the right-hand tail
+    is selling you half a fact.</p>
+
+    <blockquote>The distribution is not higher. It is wider.</blockquote>
+
+    <p>This matters commercially, not just morally. A superiority thesis tells you to go
+    and find special people. A variance thesis tells you something far more actionable:
+    that the raw material is abundant, cheap, systematically mispriced, and that the
+    binding constraint is not talent at all. It is containment.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">02 · The count</div>
+    <h2>How many, honestly</h2>
+
+    <p>There is no clinical definition of neurodivergence, no diagnostic test for it, and
+    no census that counts it. Anyone quoting you a precise figure is quoting a preference.
+    What exists is a range, and the range is wide because the boundary is a decision rather
+    than a discovery.</p>
+
+    <div class="stat">
+      <div class="stat__n">15 - 20%<span>of the population</span></div>
+      <div class="stat__b">The commonly cited global range, roughly 1.2 to 1.6 billion
+      people. Approximately one in six to one in five. <span class="tag tag--mod">MOD · definitional, not clinical</span></div>
+    </div>
+
+    <div class="stat">
+      <div class="stat__n">19%<span>self-identified, US</span></div>
+      <div class="stat__b">Polling in the United States found roughly one in five adults
+      identifying as neurodivergent. Self-identification is not diagnosis, and the gap
+      between the two is itself the interesting datum. <span class="tag tag--mod">MOD</span></div>
+    </div>
+
+    <div class="stat">
+      <div class="stat__n">10 - 20%<span>dyslexia alone</span></div>
+      <div class="stat__b">One condition, on its own, plausibly covering a fifth of
+      people. Which should tell you how much of the workforce is quietly running
+      compensatory machinery nobody has ever asked about. <span class="tag tag--mod">MOD</span></div>
+    </div>
+
+    <p style="margin-top:56px">Our previous edition asserted that while neurodivergent
+    people are around twenty percent of the general population, they are eighty percent of
+    those who excel at the extreme fringes of society. It is a good sentence. It is a
+    memorable sentence. <em>We cannot source it, and we are withdrawing it.</em></p>
+
+    <p>What follows instead is only what can be checked.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">03 · The right tail</div>
+    <h2>The evidence that the extremes build things</h2>
+
+    <p>The strongest single body of evidence concerns dyslexia and entrepreneurship, and
+    it comes from Julie Logan at Cass Business School, who ran the comparison across both
+    the United States and the United Kingdom.</p>
+
+    <div class="grid">
+      <div class="row">
+        <div class="row__k">Dyslexia among US entrepreneurs</div>
+        <div class="row__v">35 percent, against roughly 15 percent in the general
+        population. <span class="tag tag--hi">HIGH</span></div>
+      </div>
+      <div class="row">
+        <div class="row__k">Dyslexia among UK entrepreneurs</div>
+        <div class="row__v">20 percent. The gap between the two countries is itself
+        evidence that this is environmental as much as neurological.
+        <span class="tag tag--hi">HIGH</span></div>
+      </div>
+      <div class="row">
+        <div class="row__k">Behavioural differences</div>
+        <div class="row__v">Dyslexic founders were more likely to delegate authority,
+        stronger in oral communication and problem solving, and roughly twice as likely to
+        own two or more businesses. <span class="tag tag--hi">HIGH</span></div>
+      </div>
+      <div class="row">
+        <div class="row__k">Self-made millionaires</div>
+        <div class="row__v">A frequently repeated figure of 40 percent traces to a 2003
+        industry report, not to peer review. We cite it because others will, and we flag
+        it because it should not carry weight.
+        <span class="tag tag--mod">MOD · 2003, industry, unreplicated</span></div>
+      </div>
+    </div>
+
+    <p style="margin-top:56px">Note what the Logan work actually shows. Not that dyslexic
+    people are cleverer. That children who spend a decade building workarounds for a system
+    that will not bend arrive in adulthood holding a set of transferable compensatory
+    skills. The advantage is not the condition. <strong>The advantage is the decade of
+    compensation the condition forced.</strong></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">04 · The finding that cost us our first draft</div>
+    <h2>The traits that start it are not the traits that hold it</h2>
+
+    <p class="lead">In 2026 a meta-analysis pulled together forty-seven empirical studies
+    and two hundred and ninety-eight effect sizes on ADHD and entrepreneurship. It is the
+    most serious thing anybody has done on this question, and it does not say what the
+    movement wants it to say.</p>
+
+    <div class="grid">
+      <div class="row">
+        <div class="row__k">Hyperactivity and impulsivity</div>
+        <div class="row__v">Positively associated with entrepreneurial attitudes and
+        entrepreneurial behaviour. The launch is real. <span class="tag tag--hi">HIGH</span></div>
+      </div>
+      <div class="row">
+        <div class="row__k">The same traits, post-launch</div>
+        <div class="row__v">Not significantly associated with outcomes after the thing
+        exists. The launch does not carry through. <span class="tag tag--hi">HIGH</span></div>
+      </div>
+      <div class="row">
+        <div class="row__k">Inattention</div>
+        <div class="row__v">Negatively associated with post-launch outcomes. The trait
+        that starts companies is not the trait that survives them.
+        <span class="tag tag--hi">HIGH</span></div>
+      </div>
+    </div>
+
+    <blockquote>Ignition and containment are different engines.</blockquote>
+
+    <p>A weaker paper would bury this. We are putting it in the middle of ours, in the
+    largest type on the page, because it is the most valuable sentence in the entire
+    literature and almost nobody in this field is willing to print it.</p>
+
+    <p>Here is why it is good news rather than bad. If the outlier trait produced both the
+    ignition and the endurance, the correct strategy would be to find outliers and get out
+    of the way, and that strategy has been tried at enormous expense and it does not work.
+    Because the two are separable, the correct strategy is different and far more
+    tractable: <strong>pair the ignition with a structure that supplies what it
+    structurally cannot supply itself.</strong></p>
+
+    <p>Not a manager standing over it. Not therapy aimed at sanding the trait down until it
+    stops generating. A scaffold that holds the follow-through, the record, the memory, the
+    audit, the boring parts, so the generator can go on generating without being asked to
+    become a different kind of mind on Tuesday.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">05 · The left tail</div>
+    <h2>The waste, stated plainly</h2>
+
+    <p>The same distribution, measured at the other end.</p>
+
+    <div class="stat">
+      <div class="stat__n">17%<span>autistic adults in employment</span></div>
+      <div class="stat__b">A 2019 meta-analysis figure. Other measures put paid work
+      nearer a third. The estimates disagree violently, which is itself a finding about
+      how little anyone has bothered to measure.
+      <span class="tag tag--mod">MOD · methodology-dependent</span></div>
+    </div>
+
+    <div class="stat">
+      <div class="stat__n">3.5×<span>unemployment odds</span></div>
+      <div class="stat__b">Autistic adults against non-autistic adults.
+      <span class="tag tag--mod">MOD</span></div>
+    </div>
+
+    <div class="stat">
+      <div class="stat__n">56%<span>outside the labour force entirely</span></div>
+      <div class="stat__b">Not unemployed. Not counted. The single most important number
+      on this page, because a person outside the labour force does not appear in any
+      unemployment statistic anybody quotes. <span class="tag tag--mod">MOD</span></div>
+    </div>
+
+    <p style="margin-top:56px">Hold these two sections next to each other. Thirty-five
+    percent of American founders on one page. Seventeen percent employment on the next.
+    <strong>Same population. Same curve. No contradiction.</strong></p>
+
+    <p>That is what a wide distribution looks like from the inside. It is also why the
+    fringes of any field are full of outliers and the middle is not. The fringes select for
+    variance. The middle selects against it. Neither is a judgement about worth, and both
+    are entirely predictable once you stop arguing about superiority.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">06 · What follows</div>
+    <h2>Structure is the product</h2>
+
+    <p>Everything above converges on one operational conclusion. The scarce thing is not
+    the outlier. Outliers are abundant, they are cheap because they are mispriced, and one
+    in five people reading this is one. The scarce thing is a structure that can hold an
+    outlier at full output without either breaking or asking them to stop being what they
+    are.</p>
+
+    <p>So we build the structure. That is the entire business.</p>
+
+    <div class="grid">
+      <div class="row">
+        <div class="row__k">Memory that does not degrade</div>
+        <div class="row__v">Persistent layered memory across sessions, months and
+        machines. Ignition minds do not lose ideas because the ideas were bad. They lose
+        them because nothing caught them.</div>
+      </div>
+      <div class="row">
+        <div class="row__k">Records that cannot be edited quietly</div>
+        <div class="row__v">Append-only correction. When something is wrong it is marked
+        wrong and the original stays visible. A person who has been gaslit does not need
+        a system that revises history helpfully.</div>
+      </div>
+      <div class="row">
+        <div class="row__k">Confidence stated, never implied</div>
+        <div class="row__v">Every factual claim carries its own reliability, including
+        the ones on this page. If it cannot be sourced it is marked unsourced or it is
+        withdrawn, as one was in section two.</div>
+      </div>
+      <div class="row">
+        <div class="row__k">Assets that fund the work</div>
+        <div class="row__v">The research arms are paid for by owned, cash-generating
+        businesses rather than by grants or by fees. Nobody funds neurodivergence and
+        suicide research off a retainer. You fund it off a balance sheet, which is the
+        only arrangement under which the findings stay yours.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">07 · Limits</div>
+    <h2>What this paper does not claim</h2>
+
+    <p><strong>It does not claim neurodivergence is an advantage.</strong> It claims the
+    distribution is wide, that both tails are real, and that most of the left tail is
+    unmeasured.</p>
+
+    <p><strong>It does not claim the conditions are not disabling.</strong> Seventeen
+    percent employment is not a superpower. Treating serious impairment as a branding
+    opportunity is an insult dressed as advocacy, and the people it insults are usually
+    the ones not well enough to object.</p>
+
+    <p><strong>It does not claim causation.</strong> Logan found association. The
+    compensatory-skill explanation is the best available reading of it, and it is a
+    reading, not a proof.</p>
+
+    <p><strong>It does not claim the ranges are precise.</strong> They are ranges because
+    the underlying category is a convention. We would rather publish an honest range than
+    a confident number.</p>
+
+    <p>A manifesto that cannot say what it is unsure of is an advertisement. This is not
+    an advertisement.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">08</div>
+    <h2>The call</h2>
+
+    <p class="lead">If you are one of the one in five, you have probably spent your life
+    being told that the thing you are best at is a symptom.</p>
+
+    <p>You do not need to be fixed and you do not need to be celebrated. Both of those
+    have been tried on you and neither one built anything. What you need is a structure
+    around the output, so that the part of you that generates can run at full power without
+    the rest of your life being the cost of it.</p>
+
+    <p>That is what is being built here. Not accommodation. Not inspiration. Containment
+    strong enough to hold a wide distribution at its own natural amplitude.</p>
+
+    <blockquote>Bring us the ignition. We will hold the rest.</blockquote>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">09 · The census</div>
+    <h2>One hundred minds, specified</h2>
+    <p class="lead">What follows is the census: one hundred ways a human nervous system can
+    differ from the installed default, what each one is <strong>for</strong> when it works,
+    and the specific thing society owes each one when it does not.</p>
+
+    <p>The format is deliberately plain. Three fields per entry: the condition and how many
+    people carry it. Where it shines - the documented strength associated with it, not a
+    consolation prize. And what must be covered - the concrete structural support that turns
+    variance from suffering into output. No inspiration language. No superpower framing.
+    Just the engineering specification of one hundred kinds of mind.</p>
+
+    <p>Two rules governed the writing. First, every shine had to be real - sourced from the
+    research literature or from the lived expertise of the communities themselves, never
+    invented to comfort. Second, every cover item had to be something that can actually be
+    built or funded or changed - not "awareness" and not "acceptance," which are things people
+    say instead of doing anything.</p>
+
+      <h3>COGNITIVE &amp; ATTENTION · 14</h3>      <div class="cnd">
+        <div class="cnd__n">01</div>
+        <div class="cnd__b">
+          <div class="cnd__name">ADHD - combined <span class="cnd__prev">~2.5-3% adults</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Rapid ideation, crisis performance, hyperfocus on interest-driven work, pattern jumps others miss</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> External scaffolding for follow-through: deadlines with teeth, body-doubling, task capture systems, medication access without shame</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">02</div>
+        <div class="cnd__b">
+          <div class="cnd__name">ADHD - predominantly inattentive <span class="cnd__prev">~2-3%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Deep single-thread absorption, low-conflict work styles, quiet observation, sustained reading depth</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Deadline structures that do not rely on alarm-anxiety; interruption protection; working-memory prosthetics (notes, automation)</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">03</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Dyslexia <span class="cnd__prev">~10%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Oral reasoning, spatial synthesis, entrepreneurship (Logan: 35% of US founders), big-picture narrative thinking</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Text-to-speech everywhere, extra exam time, no shame in audiobooks, design that assumes listening is reading</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">04</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Dyscalculia <span class="cnd__prev">~3-6%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Strong verbal and visual creativity; often compensates with superior logic in non-numeric frames</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Calculators always allowed; number-free interfaces where possible; patience with left-right of arithmetic, not intelligence</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">05</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Dysgraphia <span class="cnd__prev">~5-20% of writing difficulties</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Ideas far ahead of handwriting speed; excellent verbal composition</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Keyboard-first schooling, speech-to-text, never grade handwriting when assessing ideas</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">06</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Dyspraxia (DCD) <span class="cnd__prev">~5-6% of children</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Verbal abstraction, strategy games, empathy through lived clumsiness</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> OT support, typing over handwriting, no team-sport humiliation rituals</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">07</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Slow processing speed <span class="cnd__prev">~5% clinic-referred</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Accuracy over haste; deep verification habits; catching what fast thinkers miss</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Extended time limits, no rapid-fire interrogation formats, valuing thoroughness explicitly</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">08</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Executive function disorder <span class="cnd__prev">overlaps ADHD/autism/depres.</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Strategic vision intact even when sequencing fails; often paired with strong long-term memory</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> External executive: calendars that act, not remind; task initiation triggers; one-list-not-twelve culture</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">09</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Central auditory processing disorder <span class="cnd__prev">~2-3% children</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Visual learning strength; written communication often superior to phone calls</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Subtitles default-on, written instructions after verbal ones, quiet meeting rooms</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">10</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Nonverbal learning disability <span class="cnd__prev">rare ~0.1-1%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Exceptional rote memory, verbal IQ frequently above average, mechanical precision</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Explicit social-rule teaching rather than assumed osmosis; spatial navigation support</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">11</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Hyperlexia <span class="cnd__prev">rare; common in autism</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Precocious decoding, pattern extraction from text, encyclopedic retention</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Comprehension support alongside celebration of decoding; don't confuse word-calling with understanding</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">12</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Twice-exceptional (2e) <span class="cnd__prev">~2-5% of gifted programs</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Gifted AND disabled simultaneously; the contradiction produces original thinkers</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Programs that hold both truths: acceleration AND accommodation, never one instead of the other</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">13</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Gifted with executive dysfunction <span class="cnd__prev">common in gifted pop.</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Vision, abstraction, moral intensity, rapid mastery of interesting domains</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> The same scaffolds as ADHD plus permission to be brilliant at some things and lost at others</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">14</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Cluttering (fluency) <span class="cnd__prev">rare (~5% of fluency dis.)</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Fast thought-to-speech pipeline; energetic conversational style</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Speech therapy honoring pace rather than forcing monotone; listeners taught patience</p>
+        </div>
+      </div>      <h3>AUTISM SPECTRUM · 8</h3>      <div class="cnd">
+        <div class="cnd__n">15</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Autism level 1 <span class="cnd__prev">~1-2% population</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Systemizing at expert level, honesty as a feature not bug, pattern integrity, deep expertise</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Interview processes that test skill not eye-contact; sensory-controlled workplaces; clear literal communication</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">16</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Autism level 2 <span class="cnd__prev">~0.3-0.5%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Focused expertise with support needs; visual precision; loyalty and routine reliability</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Structured employment with job coaches, AAC options, routines treated as professional equipment</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">17</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Autism level 3 <span class="cnd__prev">~0.1%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Communication via alternative channels; the presumption-of-competence movement exists because these minds were wrongly warehoused</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> 24/7 support infrastructure, AAC devices funded, legal guardianship safeguards, community not institutions</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">18</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Asperger profile (historical) <span class="cnd__prev">legacy diagnosis</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Same systemizing strengths as L1 without early language delay</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Identical accommodations; the label changed, the mind didn't</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">19</div>
+        <div class="cnd__b">
+          <div class="cnd__name">PDD-NOS (historical) <span class="cnd__prev">legacy diagnosis</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Sub-threshold presentations that still need tailored environments</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Service eligibility based on need not outdated category membership</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">20</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Pathological Demand Avoidance profile <span class="cnd__prev">recognized UK, growing US</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Radical autonomy, creative demand-avoidance strategies, often high empathy for peers</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Low-demand communication frameworks; collaboration over compliance; anxiety reduction first</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">21</div>
+        <div class="cnd__b">
+          <div class="cnd__name">PDA-with-anxiety presentation <span class="cnd__prev">subset</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Insight into own avoidance plus suffering from it</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Joint anxiety treatment + environmental redesign, not behavioral compliance drills</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">22</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Broad autism phenotype <span class="cnd__prev">~15-30% of relatives</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Milder systemizing traits; often the engineers, accountants, archivists of families</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Understanding without pathologizing; traits are variation, not deficiency</p>
+        </div>
+      </div>      <h3>MOOD &amp; PSYCHOSIS · 16</h3>      <div class="cnd">
+        <div class="cnd__n">23</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Bipolar I <span class="cnd__prev">~1%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Manic-range productivity and associative richness when stabilized; creative output documented across centuries</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Mood stabilizers taken seriously, sleep protection as medical commandment, early-warning sign charts co-designed</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">24</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Bipolar II <span class="cnd__prev">~0.5-1%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Hypomanic flow states; often the highest-functioning creatives in any room</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Same vigilance without romanticizing the hypomania that burns them later</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">25</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Cyclothymia <span class="cnd__prev">~0.4-1%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Emotional range as artistic instrument; sensitivity to social weather</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Psychoeducation before medication; stability without flattening the instrument entirely</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">26</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Schizophrenia <span class="cnd__prev">~1% worldwide</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> When supported: pattern detection at edges of consensus reality; many recover and work; insight varies</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Coordinated specialty care EARLY, family psychoeducation, supported employment (IPS model works), zero violence stigma</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">27</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Schizoaffective - bipolar type <span class="cnd__prev">~0.3%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Mood-range ideation plus perceptual intensity</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Integrated mood+psychosis pharmacology, never treat half the diagnosis</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">28</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Schizoaffective - depressive type <span class="cnd__prev">~0.2%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Depth of feeling with perceptual difference</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Same integration rule; watch for the depression being treated while psychosis smolders</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">29</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Delusional disorder <span class="cnd__prev">~0.02-0.03%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Often functionally preserved in every domain except the delusional theme</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Targeted therapy for the theme only; do not medicate away the functional person</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">30</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Brief psychotic disorder <span class="cnd__prev">~0.05-0.1% per episode</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Full recovery typical; often a stress-response signal worth heeding</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Follow-up care after resolution; treat the trigger, not just the episode</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">31</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Major depression <span class="cnd__prev">~5-8% adults</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Realism about optimism bias ("depressive realism" evidence), depth of moral seriousness, hypersensitivity to injustice</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Evidence-based therapy access, exercise prescription, ECT/ketamine without stigma when indicated, sick leave that doesn't require lying</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">32</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Treatment-resistant depression <span class="cnd__prev">~30% of MDD</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Persistence through failed treatments is itself resilience data</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Ketamine/esketamine pathways, TMS, psilocybin trials, genomic medication matching</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">33</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Persistent depressive disorder <span class="cnd__prev">~1.5-2%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Chronic adaptation skills; dark humor as connective tissue</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Long-term therapy models, recognition that "high-functioning" is expensive</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">34</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Postpartum depression <span class="cnd__prev">~10-15% of births</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Maternal instinct intact beneath the illness; recovery rates excellent with treatment</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Screening at every pediatric visit, partner education, mother-baby units, no criminalization of the illness</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">35</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Premenstrual dysphoric disorder <span class="cnd__prev">~2-5% of menstruating people</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Baseline self often high-functioning; cycle-awareness becomes superpower once mapped</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Cycle-timed treatment, workplace flex during luteal phase, validation not dismissal</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">36</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Seasonal affective disorder <span class="cnd__prev">~1-10% by latitude</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Light-sensitive nervous systems often also light-responsive to treatment</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Dawn simulators, 10,000-lux lamps prescribed like glasses, latitude-honoring work policies</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">37</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Depersonalization-derealization <span class="cnd__prev">~1-2% episodic; chronic rarer</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Detachment as protective mechanism that worked; philosophical depth about consciousness rare elsewhere</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Grounding-based therapies, cannabis/disassociation trigger audits, validation that the experience is real</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">38</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Psychotic depression <span class="cnd__prev">~0.4% of depressions</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Complete recovery typical with combined treatment</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Electroconvulsive therapy destigmatized; combined antidepressant+antipsychotic protocols</p>
+        </div>
+      </div>      <h3>ANXIETY, TRAUMA &amp; COMPULSION · 12</h3>      <div class="cnd">
+        <div class="cnd__n">39</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Generalized anxiety <span class="cnd__prev">~3-4%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Threat-modeling excellence; contingency planning; conscientiousness under the worry</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> CBT access, worry-time scheduling, medication when needed without sedation-as-compliance</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">40</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Panic disorder <span class="cnd__prev">~2-3%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Once panic is decoded, courage in facing it daily exceeds most people's lifetime requirement</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Interoceptive exposure therapy, cardiac workup once then believed, no benzodiazepine shaming but careful stewardship</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">41</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Social anxiety <span class="cnd__prev">~7%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Deep preparation, observational skill, written-over-spoken excellence, loyalty in small circles</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Exposure hierarchies, presentation alternatives (recorded, written), no forced icebreakers</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">42</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Specific phobia complex <span class="cnd__prev">~9-12%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Highly specific fear = highly specific brain specialization elsewhere</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> One-session exposure treatment (works 80-90%), never forced confrontation as comedy</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">43</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Selective mutism <span class="cnd__prev">~0.5-1% children</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Often chatty at home; the silence is anxiety, not defiance</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Stimulus fading (whispering games), school staff training, never punishment for silence</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">44</div>
+        <div class="cnd__b">
+          <div class="cnd__name">OCD <span class="cnd__prev">~1-2%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Attention to detail weaponized; contamination awareness that saves lives in labs/medicine; moral scrupulosity as conscience</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> ERP therapy (gold standard), family accommodation training to STOP feeding compulsions, medication access</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">45</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Body dysmorphic disorder <span class="cnd__prev">~1-2%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Aesthetic sensitivity turned against self</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> CBT-BDD specialized therapy, cosmetic surgery screening gates, mirror retraining</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">46</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Hoarding disorder <span class="cnd__prev">~1.5-6%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Object memory extraordinary; emotional attachment as information preservation</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Specialized CBT (not cleanup crews), harm-reduction framing, dignity-preserving sorting</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">47</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Trichotillomania <span class="cnd__prev">~1-2%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Often paired with intense focus; the hands seek occupation</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Habit reversal training, fidget normalization, hair-free solidarity communities</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">48</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Excoriation disorder <span class="cnd__prev">~1-2%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Same focused-hand profile</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> HRT therapy, skin-care as ritual replacement, dermatological partnership</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">49</div>
+        <div class="cnd__b">
+          <div class="cnd__name">PTSD <span class="cnd__prev">~3-9% lifetime</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Hyperawareness trained by real danger; threat-detection that saved them once</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> EMDR, prolonged exposure, MDMA-assisted trials, service dogs, employer education on triggers</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">50</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Complex PTSD <span class="cnd__prev">emerging dx, common</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Survivor intelligence; reading rooms and people accurately because they had to</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Phase-based therapy (stabilize-process-integrate), relational repair, not just symptom suppression</p>
+        </div>
+      </div>      <h3>PERSONALITY VARIANCE · 10</h3>      <div class="cnd">
+        <div class="cnd__n">51</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Borderline PD <span class="cnd__prev">~1-2%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Emotional intensity as loyalty engine; creativity under storm; recovery is COMMON (88% remission at 10yrs in McLean study)</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> DBT (evidence gold standard), mentalization-based therapy, clinician training against the stigma clinicians themselves carry</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">52</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Antisocial PD <span class="cnd__prev">~1-4% men</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Decisiveness, calm under pressure others panic in; some channel it into surgery, law, trading</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Early conduct-disorder intervention, structure with consequences, protect society AND the person</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">53</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Narcissistic PD <span class="cnd__prev">~1%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Confidence that opens doors; vision self-belief that funds startups; charisma</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Therapy only when THEY want it; boundaries from others work better than confrontation</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">54</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Avoidant PD <span class="cnd__prev">~2%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Depth over breadth in relationships; craft mastery in solitary work</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Graduated social exposure, remote-first careers legitimized, small-group belonging structures</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">55</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Obsessive-compulsive PD <span class="cnd__prev">~2-8%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Reliability incarnate; documentation cultures are built by them; quality control natural</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Flexibility training, delegation practice, values clarification beyond productivity</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">56</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Schizoid PD <span class="cnd__prev">~3-5%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Contentment in solitude most humans can't reach; internal worlds rich enough to live in</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Remote work legitimacy, consent-based socializing, stop treating solitude as disease</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">57</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Schizotypal PD <span class="cnd__prev">~3%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Magical-thinking adjacent creativity; unconventional perception feeds art and science</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Monitor for schizophrenia transition (~10-20%); otherwise celebrate the perceptual difference</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">58</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Dependent PD <span class="cnd__prev">~0.5%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Loyalty absolute; support roles executed with devotion</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Graduated autonomy building, healthy relationship modeling, avoid exploiting the loyalty</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">59</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Histrionic PD <span class="cnd__prev">~1-3%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Emotional expressiveness as social gift; storytelling magnetism</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Channel the drama productively (performance, sales, teaching); validate without reinforcing crisis cycles</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">60</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Paranoid PD <span class="cnd__prev">~2-4%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Vigilance that catches real threats others miss; loyalty to proven allies</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Trust-building consistency, therapy that doesn't lead with challenging the worldview</p>
+        </div>
+      </div>      <h3>NEUROLOGICAL &amp; SENSORY · 14</h3>      <div class="cnd">
+        <div class="cnd__n">61</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Epilepsy - focal <span class="cnd__prev">~0.5-1%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Post-seizure clarity reports; seizure-adjacent creative states documented historically</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Medication optimization, driving-law navigation help, SUDEP risk honest conversation, employment protection</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">62</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Epilepsy - generalized <span class="cnd__prev">~0.3-0.5%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Same as focal plus community identity around shared condition</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Same supports; genetic counseling where familial</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">63</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Chronic migraine with aura <span class="cnd__prev">~12% population</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Aura as creative signal (Hildegard von Bingen hypothesis); pain-forged pain-management expertise</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Trigger mapping apps, CGRP inhibitors (new era), workplace darkness-and-quiet protocols</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">64</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Tourette syndrome <span class="cnd__prev">~0.3-1%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Tic suppression effort builds willpower muscle; many report flow-state tic freedom</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> CBIT therapy, tic-normalization education, comorbid ADHD/OCD treated alongside</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">65</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Chronic tic disorder <span class="cnd__prev">~1-3% children</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Milder tic profile, same willpower economy</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Reassurance and watchful waiting; most remit by adulthood</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">66</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Narcolepsy type 1 <span class="cnd__prev">~0.02-0.05%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Dream-reality boundary expertise; REM intrusion creativity; humor about cataplexy</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Sodium oxybate/Xywav access, scheduled naps as legitimate accommodation, driving-law advocacy</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">67</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Narcolepsy type 2 <span class="cnd__prev">~0.02-0.04%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Same without cataplexy; often misdiagnosed as laziness for years</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Same medications, plus the vindication of finally having a name for it</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">68</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Synesthesia <span class="cnd__prev">~4%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Cross-sensory memory hooks; superior color-pitch association; creative metaphor generation</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Celebrate it; use it in learning design; research participation invitations</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">69</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Aphantasia <span class="cnd__prev">~1-4%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Abstract-verbal cognition unburdened by imagery; often exceptional conceptual mathematics</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Stop assuming "picture it" works; visualization-free learning materials</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">70</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Hyperphantasia <span class="cnd__prev">~1-3%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Vivid mental imagery as design/engineering superpower</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Careers that pay for the inner cinema: architecture, VFX, surgical planning</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">71</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Misophonia <span class="cnd__prev">~5-20% varying def.</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Auditory discrimination so fine it causes suffering; often paired with musical ability</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Sound-masking earbuds, trigger-informed seating charts, family education that it's neuro not rude</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">72</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Prosopagnosia <span class="cnd__prev">~2%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Compensates via voice/gait/clothing memory; often exceptional non-face person-recognition</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Voice introductions, name-tag norms, facial-recognition-free ID alternatives</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">73</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Sensory processing sensitivity <span class="cnd__prev">~15-20% (Aron)</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Depth of processing, aesthetic responsiveness, empathy accuracy, HSP framework</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Environment control rights (lighting/sound), recovery time after stimulation, no "too sensitive" shaming</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">74</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Vestibular hypersensitivity <span class="cnd__prev">varies</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Motion-detection acuity that others lack</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> VR tolerance grading, travel-seat selection rights, migraine co-treatment</p>
+        </div>
+      </div>      <h3>GENETIC &amp; INTELLECTUAL · 16</h3>      <div class="cnd">
+        <div class="cnd__n">75</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Intellectual disability - mild <span class="cnd__prev">~1-2%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Concrete-task excellence, social warmth, routine reliability</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Supported employment (works), independent-living training, guardianship only where truly needed</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">76</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Intellectual disability - severe <span class="cnd__prev">~0.3-0.5%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Presence, joy transmission, family cohesion effects documented</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Full-support residential models, communication rights regardless of speech, family respite funding</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">77</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Down syndrome <span class="cnd__prev">~1 in 700 births</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Visual memory strength, social warmth legendary, employment success stories multiplying</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Inclusive education with supports, speech/OT early intervention, adult independence pathways, prenatal counseling honesty</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">78</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Fragile X <span class="cnd__prev">~1 in 4000 males</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Visual learning and long-term memory relative to working memory; social warmth</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Minocycline trials, structure-plus-patience education, carrier screening for family planning</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">79</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Williams syndrome <span class="cnd__prev">~1 in 7500-20000</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Musical affinity near-universal; social warmth toward strangers; facial recognition excellence</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Music-based learning, stranger-danger explicit teaching (their warmth is vulnerability), cardiovascular monitoring</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">80</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Prader-Willi <span class="cnd__prev">~1 in 10000-15000</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Jigsaw-puzzle proficiency documented; food-security routines build life skills</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Food environment lockdown (not willpower), growth hormone access, structured day programs</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">81</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Angelman <span class="cnd__prev">~1 in 12000-20000</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Laughter as communication; joyful disposition noted universally; walking milestones reached with therapy</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Seizure management, communication devices, sleep support, family respite as standard of care</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">82</div>
+        <div class="cnd__b">
+          <div class="cnd__name">22q11.2 deletion <span class="cnd__prev">~1 in 2000-4000</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Often average IQ with uneven profile; musical ability sometimes preserved</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Psychosis-risk surveillance (25-30% develop SCZ), calcium/cardiac monitoring, early special-ed</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">83</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Klinefelter XXY <span class="cnd__prev">~1 in 600 males</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Verbal strengths possible with support; often undiagnosed and fine</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Testosterone timing decisions, fertility micro-TESE options, language therapy early</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">84</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Turner XO <span class="cnd__prev">~1 in 2000 females</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Visuospatial challenge with strong verbal compensation; social courage noted</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Growth hormone, estrogen timing, cardiac/aortic surveillance, hearing monitoring</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">85</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Triple X <span class="cnd__prev">~1 in 1000 females</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Most undiagnosed and asymptomatic; tall stature sometimes the only sign</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Watchful waiting, speech support if needed, no panic counseling</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">86</div>
+        <div class="cnd__b">
+          <div class="cnd__name">XYY <span class="cnd__prev">~1 in 1000 males</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Most undiagnosed; historical criminal-stigma now debunked as ascertainment artifact</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Retire the stigma; support if speech/learning issues emerge</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">87</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Phenylketonuria (treated) <span class="cnd__prev">~1 in 10000-15000</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Normal cognition achievable with dietary discipline few could sustain</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Newborn screening (universal), Kuvan/Pegvaliase access, diet-break emergency protocols</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">88</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Rett syndrome <span class="cnd__prev">~1 in 10000 girls</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Eye-gaze communication reveals full cognition behind motor arrest; Trofinetide approved 2023</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> AAC eye-tracking priority, hand-function preservation, seizure care, trofinetide access</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">89</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Tuberous sclerosis <span class="cnd__prev">~1 in 6000</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Early seizure control predicts better cognition - time matters</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> mTOR inhibitors, vigabatrin for infantile spasms FAST, TSC-associated autism support</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">90</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Neurofibromatosis type 1 <span class="cnd__prev">~1 in 3000</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Storytelling and verbal skills often strong; attention issues manageable</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Selumetinib for plexiform tumors, MPNST surveillance, visible-difference psychological support</p>
+        </div>
+      </div>      <h3>ACQUIRED &amp; SYSTEMIC · 10</h3>      <div class="cnd">
+        <div class="cnd__n">91</div>
+        <div class="cnd__b">
+          <div class="cnd__name">TBI cognitive sequelae <span class="cnd__prev">~2.8M ED visits US/yr</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Recovery neuroplasticity real; compensatory strategy mastery inspiring</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Cognitive rehab therapy, return-to-work graded protocols, caregiver training, legal protection during recovery</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">92</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Long-COVID brain fog <span class="cnd__prev">~10-30% of infections</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Pacing wisdom hard-won; symptom-pattern citizen-science unprecedented</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Graded exercise CAUTION (PEM is real), cognitive pacing tools, disability recognition, research funding</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">93</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Chemotherapy-related cognitive impairment <span class="cnd__prev">up to 75% during chemo</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> "Chemo brain" survivors often develop compensatory systems rivaling pre-illness function</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Cognitive rehab, employer flexibility during treatment, oncologist acknowledgment (still denied sometimes)</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">94</div>
+        <div class="cnd__b">
+          <div class="cnd__name">ME/CFS <span class="cnd__prev">~0.2-0.5%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Energy-envelope management as mastered discipline; peer-support networks exemplary</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Pacing-only lifestyle, POTS co-treatment, biomedical research funding parity, BELIEF from clinicians</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">95</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Fibromyalgia cognition <span class="cnd__prev">~2-4%</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Pain-forged empathy; pacing expertise parallel to ME/CFS</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Sleep treatment first, gentle movement, fibro-specialist access, no "it's in your head" dismissal</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">96</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Multiple sclerosis cognition <span class="cnd__prev">~40-50% of MS patients</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Cognitive reserve theory: education protects; adaptation stories abundant</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Disease-modifying therapy adherence, cooling strategies (Uhthoff's), cognitive rehab</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">97</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Parkinson early-cognitive <span class="cnd__prev">~10-25% mild impairment early</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Procedural memory often preserved - skills outlast facts</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Exercise as medicine (evidence strong), DBS evaluation timing, LSVT BIG/LOUD programs</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">98</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Dementia - frontotemporal (early onset) <span class="cnd__prev">~15-20% of early dementias</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Artistic emergence documented in FTD case literature (new creative outputs!)</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Genetic counseling (60% familial), behavioral-symptom caregiver training, art-channeling the emergence</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">99</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Sleep-apnea cognitive effects <span class="cnd__prev">~1 billion globally</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> CPAP adherence transforms cognition within months - reversible!</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> CPAP/BiPAP access, dental appliances alternatives, driver-safety screening, weight-neutral messaging</p>
+        </div>
+      </div>      <div class="cnd">
+        <div class="cnd__n">100</div>
+        <div class="cnd__b">
+          <div class="cnd__name">Medication-induced cognitive changes <span class="cnd__prev">iatrogenic, widespread</span></div>
+          <p class="cnd__shine"><span class="k">WHERE THEY SHINE</span> Recognition that the fog is chemical, not personal failure</p>
+          <p class="cnd__cover"><span class="k">WHAT SOCIETY MUST COVER</span> Deprescribing reviews (Beers criteria), anticholinergic burden calculators, pharmacist-led med reconciliation</p>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section id="sources">
+<section>
+  <div class="wrap">
+    <h3>Sources</h3>
+    <div class="sources">
+      Logan, J. - <em style="color:var(--soft)">Dyslexic Entrepreneurs: The Incidence, Their Coping Strategies and Their Business Skills</em>, Cass Business School.
+      <a href="https://www.bayes.citystgeorges.ac.uk/__data/assets/pdf_file/0003/367383/julielogan-dyslexic-entrepreneurs.pdf">Full text</a><br>
+      Tran, M. H., Wiklund, J., Antshel, K., Jhawar, N., Montgomery, C. - <em style="color:var(--soft)">Entrepreneurship and ADHD: A Meta-Analytical Assessment of the State-of-the-Art and Suggestions for the Future</em>, 2026. 47 studies, 298 effect sizes.
+      <a href="https://journals.sagepub.com/doi/10.1177/10422587251392498">Journal</a><br>
+      Wikipedia - <em style="color:var(--soft)">Employment of autistic people</em>, aggregating employment and labour-force-participation estimates.
+      <a href="https://en.wikipedia.org/wiki/Employment_of_autistic_people">Overview</a><br>
+      YouGov - <em style="color:var(--soft)">19% of Americans identify as neurodivergent</em>.
+      <a href="https://yougov.com/en-us/articles/50950-neurodiversity-neurodivergence-in-united-states-19-percent-americans-identify-neurodivergent-poll">Poll</a>
+    </div>
+
+    <div class="foot">
+      Cognitive Intelligence Services Pty Ltd · ABN 42 689 181 208<br>
+      Sydney, New South Wales, Australia<br><br>
+      Redpaper, edition one. Companion to the whitepaper on neurodivergence support,
+      the greenpaper on poverty reduction, and the blackpaper on suicide reduction.<br><br>
+      <a href="https://whitepaper.black.industries/">Whitepaper</a> ·
+      <a href="https://greenpaper.black.industries/">Greenpaper</a> ·
+      <a href="https://blackpaper.black.industries/">Blackpaper</a>
+    </div>
+  </div>
+</section>
+
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"99a4399d79dd4b438c79b74baa0a9399","r":1}' crossorigin="anonymous"></script>
+</body>
+</html>
